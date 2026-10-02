@@ -1,0 +1,48 @@
+{
+  "name": "@orphiczhou/dsh-region-probe",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Read-only Cordis Inspect provider for DeepSeek Harness: tells an agent which UI regions the running shell actually rendered, their occupancy and geometry, and reads any region's rendered content by slot key or CSS selector — including a failure history for regions that broke and recovered.",
+  "license": "MIT",
+  "author": "orphiczhou",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "inspect",
+    "ui-regions",
+    "self-verification"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orphiczhou/dsh-region-probe.git"
+  },
+  "homepage": "https://github.com/orphiczhou/dsh-region-probe#readme",
+  "bugs": {
+    "url": "https://github.com/orphiczhou/dsh-region-probe/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
