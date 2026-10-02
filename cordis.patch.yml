@@ -1,0 +1,3 @@
+- insert:
+    - id: region-probe
+      name: '@orphiczhou/dsh-region-probe'
